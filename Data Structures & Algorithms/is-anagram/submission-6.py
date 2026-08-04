@@ -1,0 +1,19 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+      if len(s) != len(t):
+        return False
+      s_1={}
+      t_1={}
+      for i in s:
+        if i in s_1:
+            s_1[i] +=1
+        else:
+            s_1[i] = 1
+      for j in t:
+        if j in t_1:
+            t_1[j] +=1
+        else:
+            t_1[j] = 1
+      if s_1 == t_1:
+        return True
+      return False 
